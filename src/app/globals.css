@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://use.typekit.net/peg6qzr.css");
+
+.font-garamond {
+  font-family: "garamond-premier-pro", serif;
+}
