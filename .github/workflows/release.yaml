@@ -44,6 +44,10 @@ jobs:
           chmod 600 ~/deploykey.pem
           git config --global user.email "digital@nada-sc.jp"
           git config --global user.name "Github Actions"
+      - name: test secret 
+        run: |
+          echo "$SPORTS_PRIVATE_DEPLOYKEY"
+
       - name: Push pages
         env:
           GIT_SSH_COMMAND: ssh -i ~/deploykey.pem -o StrictHostKeyChecking=no -F /dev/
