@@ -7,6 +7,7 @@ const nextConfig = withExportImages({
   output: "export",
   assetPrefix: `/${base}`,
   basePath: `/${base}`,
+  
 })
 
 module.exports = nextConfig;
