@@ -1,3 +1,4 @@
+import { base } from "@/constants";
 import { getPoints } from "@/getPoints";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -35,7 +36,7 @@ export default async function Home() {
       }}
       className="relative mx-auto -z-10"
     >
-      <Image src="/img/points.png" alt="" className="relative" objectFit="contain" layout="fill" />
+      <Image src={`${base}/img/points.png`} alt="" className="relative" objectFit="contain" layout="fill" />
       <div
         style={{
           fontSize: "5vh",

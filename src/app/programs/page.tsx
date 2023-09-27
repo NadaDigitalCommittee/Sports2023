@@ -1,4 +1,5 @@
 import { ModalButton } from "@/components/Modal";
+import { base } from "@/constants";
 import programs from "@/programs.json";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -26,7 +27,7 @@ export default async function Home() {
                   <p className="w-28">{`【${program.group}】`}</p>
                   <p>{program.name}</p>
                   <Image
-                    src="/img/yajirusi2.svg"
+                    src={`${base}/img/yajirusi2.svg`}
                     width={15}
                     height={15}
                     alt=""

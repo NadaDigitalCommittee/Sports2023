@@ -3,6 +3,7 @@ import { HamburgerMenu } from "./HamburgerMenu";
 import Image from "next/image";
 import { FC } from "react";
 import { articles } from "@/articles";
+import { base } from "@/constants";
 
 export const Header: React.FC = () => {
   return (
@@ -61,7 +62,7 @@ const SubMenu: FC<SubMenuProps> = ({ href, title }) => {
   return (
     <Link href={href} prefetch={true} className="flex h-9 items-center">
       <p className="ml-6 mr-1 text-black text-sm">{title}</p>
-      <Image src="/img/yajirusi2.svg" width={12} height={12} alt="" className="fill-black"></Image>
+      <Image src={`${base}/img/yajirusi2.svg`} width={12} height={12} alt="" className="fill-black"></Image>
     </Link>
   );
 };

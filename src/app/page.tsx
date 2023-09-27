@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Score } from "@/components/Score";
 import { Live } from "@/components/Live";
+import { base } from "@/constants";
 
 export default async function Home() {
   return (
@@ -8,7 +9,7 @@ export default async function Home() {
       <div
         className={"fixed -z-10 bg-no-repeat w-full h-full"}
         style={{
-          backgroundImage: "url(/img/back.png)",
+          backgroundImage: `url(${base}/img/back.png)`,
           backgroundSize: "150vh auto",
           backgroundPositionY: "-25lvh",
           backgroundPositionX: "center",
@@ -17,7 +18,7 @@ export default async function Home() {
       ></div>
       <main className="lg:w-3/5 md:w-4/5 w-full mx-auto relative z-10">
         <Image
-          src="/img/back2.png"
+          src={`${base}/img/back2.png`}
           alt="logo"
           width={400}
           height={400}
@@ -43,7 +44,7 @@ export default async function Home() {
           <p>灘校生活の思い出の1つとなる、活気溢れた体育祭へ！</p>
           <p className="font-serif text-right text-sm">第94回灘校体育祭 体育委員長</p>
           <p className="font-serif text-right text-2xl">N.M.</p>
-          <Image src={"/img/president.jpg"} width={500} height={500} alt="体育委員長" className="mx-auto my-6"/>
+          <Image src={`${base}/img/president.jpg`} width={500} height={500} alt="体育委員長" className="mx-auto my-6"/>
         </div>
       </main>
     </>

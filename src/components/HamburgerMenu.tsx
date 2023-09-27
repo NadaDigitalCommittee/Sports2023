@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { base } from "@/constants";
 
 type Props = {
   children: React.ReactNode;
@@ -15,7 +16,7 @@ export const HamburgerMenu: React.FC<Props> = ({ children }) => {
     <>
       <button onClick={toggle} type="button" className="relative ml-auto" aria-label="toggle menu">
         <Image
-          src={isOpen ? "/img/menuopened.svg" : "/img/menuclosed.svg"}
+          src={isOpen ? `${base}/img/menuopened.svg` : `${base}/img/menuclosed.svg`}
           width={40}
           height={40}
           alt=""

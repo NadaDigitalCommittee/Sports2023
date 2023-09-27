@@ -1,4 +1,4 @@
-import { live, liveEmbedURL, liveURL } from "@/constants";
+import { base, live, liveEmbedURL, liveURL } from "@/constants";
 import Link from "next/link";
 import { FC } from "react";
 import Image from "next/image";
@@ -45,7 +45,7 @@ export const Live: FC<Props> = () => {
           </div>
           <div className="px-6">
             <Image
-              src="img/youtube.svg"
+              src={`${base}/img/youtube.svg`}
               alt="youtube"
               width={500}
               height={200}

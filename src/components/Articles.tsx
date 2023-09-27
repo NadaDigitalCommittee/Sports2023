@@ -1,4 +1,5 @@
 import { articles } from "@/articles";
+import { base } from "@/constants";
 import { sumo } from "@/sumo";
 import Image from "next/image";
 
@@ -17,7 +18,7 @@ export default function Article({ params }: { params: string }) {
       <div className="h-1/5"></div>
       <h1 className="text-5xl first-letter:text-theme font-bold mb-6">{article.title}</h1>
       <div className="flex flex-col justify-center items-center pb-6">
-        <Image src={article.img} alt="" width={400} height={400} className="rounded-3xl" />
+        <Image src={`${base}${article.img}`} alt="" width={400} height={400} className="rounded-3xl" />
         <div className="pl-2">
           <p className="text-2xl mt-[10px] ml-1 relative pl-3 -z-10">{article.role}</p>
           <div
@@ -66,7 +67,7 @@ export function Sumo() {
               <div className="h-[300px] w-full flex flex-col" key={i}>
                 <div className="relative h-full w-full flex-grow-[1]">
                 <Image
-                  src={`/img/sumo/${s.id}.jpg`}
+                  src={`${base}/img/sumo/${s.id}.jpg`}
                   fill
                   style={{ objectFit: "contain" }}
                   alt=""                  
@@ -93,7 +94,7 @@ export function Cheer() {
         <p className="text-lg font-bold py-6">団長挨拶</p>
         <p className="font-bold">一組団長 T.I.</p>
         <Image
-          src={"/img/articles/cheer1.png"}
+          src={`${base}/img/articles/cheer1.png`}
           width={700}
           height={500}
           alt=""
@@ -107,7 +108,7 @@ export function Cheer() {
 
         <p className="font-bold pt-6">二組団長 E.T.</p>
         <Image
-          src={"/img/articles/cheer2.png"}
+          src={`${base}/img/articles/cheer2.png`}
           width={700}
           height={500}
           alt=""
@@ -119,7 +120,7 @@ export function Cheer() {
 
         <p className="font-bold pt-6">三組団長 N.M.</p>
         <Image
-          src={"/img/articles/cheer3.png"}
+          src={`${base}/img/articles/cheer3.png`}
           width={700}
           height={500}
           alt=""
@@ -133,7 +134,7 @@ export function Cheer() {
 
         <p className="font-bold pt-6">四組団長 A.S.</p>
         <Image
-          src={"/img/articles/cheer4.png"}
+          src={`${base}/img/articles/cheer4.png`}
           width={700}
           height={500}
           alt=""
